@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+
+};
+:root{
+    --PrimaryColor : hsl(199, 100%, 33%);
+    --SecondaryColor : hsl( 187, 85% , 43% ) ; 
+    --gradientColor: linear-gradient(to right, hsl(187, 80%, 35%) 0%, hsl(199, 100%, 50%, 33%) 100%);
+    --whiteColor : hsl( 0 , 0% , 100% ) ; 
+    --blackColor : hsl( 201 , 33% , 16 % ) ; 
+    --textColor : hsl( 240 , 4% , 36% ) ; 
+    --whiteColorDeam : hsl( 0 , 0% , 93% ) ; 
+    --greyText : rgb( 190 , 190 , 190 ); 
+    --inputColor : rgb( 239 , 239 , 239 ) ; 
+    --bodyColor : rgb( 240 240 , 246 ) ; 
+    --cardBG : rgb( 225 , 225 , 235 ) ;
+    --cardHover : rgb( 255 , 255 , 255 ) ;
+
+
+};
+
+.main-container{
+    background: white;
+    padding: 8%;
+    width: 100%;
+.secTitle{
+    .title{
+        position: relative;
+        width: max-content;
+        color: var(--textColor);
+        margin: 1rem 0;
+        z-index: 2;
+        &:hover{
+            position:absolute;
+            content:'' ;
+            height: 5px;
+            right: 0;
+            bottom: 5px;
+            z-index: -1;
+        }
+    }
+    
+}
+.secContent{
+    justify-content: center;
+    gap: 1.5rem;
+    .singleDestonation{
+        height: 100%;
+        display: grid;
+        row-gap: 10px;
+        border-radius: 20px;
+        align-items: center;
+        box-shadow: 1 4px  4px rgba(85,85, 114, 0.549);
+
+        background: var(--cardBG);
+        overflow: hidden;
+        padding: 1rem;
+        &:hover{
+            background: var(--gradientColor);
+            transition: .3s ease  ;
+            box-shadow: 1 4px  4px rgba(85,85, 114, 0.549);
+        }
+        .imageDiv{
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover ;
+                transition: .2s ease  ;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+
+        }
+    }
+    .cardInfo{
+        padding: 1rem;
+        .desttitle{
+            color: var(--blackColor);
+            font-size: 1.25rem;
+          
+        }
+        .continent{
+            gap: .5rem;
+            .icon{
+                color: var(--textColor);
+                font-size: 20px;
+
+            }
+            .name{
+                color: var(--textColor);
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+        .fees{
+            width: 100%;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-top: 1.5px solid black;
+            border-bottom: 1.5px solid black ;
+
+            .grade{
+                color: var(--textColor);
+                max-width: 100px; 
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                small{
+                    text-align: center;
+                    background: var(--gradientColor);
+                    border-radius: 1rem;
+                    color: var(--whiteColor);
+                    padding: 1px 10px;
+                    font-size: 10px;
+                    margin: 5%;
+                }
+            }
+            .price{
+                font-size: 2rem;
+                color: black;
+            }
+
+        }
+        .desc{
+            font-size: 13.5px;
+            color: var(--textColor);
+            font-weight: 500;
+        }
+        .btn{
+            margin-top: 1rem;
+            color: var(--whiteColor);
+            justify-content: space-between;
+            font-weight: 600;
+            .icon{
+                align-self: center;
+                font-size: 18px;
+            }
+        }
+
+    }
+}
+
+}
+
+
+/* <================media screen ===========> */
+/* <================media screen ===========> */
+/* <================media screen ===========> */
+/* <================media screen ===========> */
+
+
+@media screen and (min-width: 600px) {
+    
+    .title{
+        font-size: 18px;
+    }
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .singleDestonation{
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    
+    .title{
+        font-size: 22px;
+    }
+    .secContent{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .singleDestonation{
+        height: auto;
+    }
+
+
+
+
+}
